@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A simple enterprise pipeline quality calculator from Cairn GTM." />
+  <title>Cairn GTM Pipeline Quality Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">CAIRN GTM</p>
+        <h1>Pipeline Quality Calculator</h1>
+        <p class="lede">
+          Evaluate an enterprise opportunity by evidence, not just coverage.
+        </p>
+      </div>
+      <a class="brand-link" href="https://cairngtm.com" target="_blank" rel="noreferrer">
+        cairngtm.com
+      </a>
+    </section>
+
+    <section class="card">
+      <div class="intro-row">
+        <div>
+          <h2>Score the evidence</h2>
+          <p>
+            Rate each signal from 0 to 3. Stronger evidence increases the deal-quality score.
+          </p>
+        </div>
+        <button id="resetBtn" class="secondary" type="button">Reset</button>
+      </div>
+
+      <form id="calculator">
+        <div id="questions"></div>
+      </form>
+    </section>
+
+    <section class="results card" aria-live="polite">
+      <div class="score-wrap">
+        <div>
+          <p class="eyebrow">PIPELINE QUALITY</p>
+          <div class="score-line">
+            <span id="score">0</span>
+            <span class="score-max">/ 100</span>
+          </div>
+        </div>
+        <div id="grade" class="grade">Unqualified</div>
+      </div>
+
+      <div class="meter" aria-hidden="true">
+        <div id="meterFill" class="meter-fill"></div>
+      </div>
+
+      <p id="summary" class="summary">
+        Add evidence above to evaluate the opportunity.
+      </p>
+
+      <div class="insights">
+        <div>
+          <h3>Strongest signals</h3>
+          <ul id="strengths">
+            <li>None yet</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Biggest gaps</h3>
+          <ul id="gaps">
+            <li>Executive sponsorship</li>
+            <li>Budget ownership</li>
+            <li>Multithreading</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Built as a lightweight experiment by Cairn GTM. This is a directional tool, not a forecast.
+      </p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
