@@ -1,6 +1,6 @@
-# Cairn GTM Pipeline Quality Calculator
+# Cairn Deal Calculator
 
-A lightweight experiment in evaluating enterprise pipeline by evidence, not just coverage.
+A lightweight tool for evaluating a single enterprise sales opportunity using deal evidence, not just stage or intuition.
 
 The calculator scores an opportunity across six common enterprise deal signals:
 
@@ -13,7 +13,9 @@ The calculator scores an opportunity across six common enterprise deal signals:
 
 ## Why this exists
 
-Pipeline coverage can create false confidence when opportunities are counted without enough evidence behind them. This small tool is meant to make deal quality more explicit.
+A deal can look healthy in the CRM while still lacking the evidence required to close.
+
+The Cairn Deal Calculator makes those signals more explicit by evaluating the strength of the evidence behind an individual opportunity.
 
 It is directional, not a forecasting model.
 
