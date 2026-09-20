@@ -52,7 +52,15 @@ const meterFill = document.getElementById("meterFill");
 const strengthsEl = document.getElementById("strengths");
 const gapsEl = document.getElementById("gaps");
 const resetBtn = document.getElementById("resetBtn");
+let dealCalculatorStarted = false;
+let dealCalculatorCompleted = false;
+const touchedFactors = new Set();
 
+function trackEvent(name, params = {}) {
+  if (typeof gtag === "function") {
+    gtag("event", name, params);
+  }
+}
 function renderQuestions() {
   questions.innerHTML = "";
 
@@ -77,7 +85,15 @@ function renderQuestions() {
       select.appendChild(option);
     });
 
-    select.addEventListener("change", calculate);
+    select.addEventListener("change", () => {
+  if (!dealCalculatorStarted) {
+    trackEvent("deal_calculator_started");
+    dealCalculatorStarted = true;
+  }
+
+  touchedFactors.add(factor.id);
+  calculate();
+});
 
     row.appendChild(copy);
     row.appendChild(select);
@@ -94,6 +110,16 @@ function calculate() {
   });
 
   const score = Math.round(weighted);
+  if (
+  touchedFactors.size === factors.length &&
+  !dealCalculatorCompleted
+) {
+  trackEvent("deal_calculator_completed", {
+    deal_score: score
+  });
+
+  dealCalculatorCompleted = true;
+}
   scoreEl.textContent = score;
   meterFill.style.width = `${score}%`;
 
@@ -137,10 +163,10 @@ function resetCalculator() {
   factors.forEach((factor) => {
     document.getElementById(factor.id).value = "0";
   });
+
+  touchedFactors.clear();
+  dealCalculatorStarted = false;
+  dealCalculatorCompleted = false;
+
   calculate();
 }
-
-resetBtn.addEventListener("click", resetCalculator);
-
-renderQuestions();
-calculate();
