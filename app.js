@@ -170,3 +170,7 @@ function resetCalculator() {
 
   calculate();
 }
+
+renderQuestions();
+calculate();
+resetBtn.addEventListener("click", resetCalculator);
