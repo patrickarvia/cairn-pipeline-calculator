@@ -7,8 +7,8 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}
 .shell{width:min(1180px,calc(100% - 36px));margin:auto;padding:48px 0 32px}
-.hero{display:grid;grid-template-columns:170px 1fr;gap:28px;align-items:end;margin-bottom:30px}
-.brand{color:var(--gold);font:800 13px Manrope,Arial,sans-serif;letter-spacing:.2em;text-decoration:none;align-self:start;padding-top:12px}
+.hero{margin-bottom:30px}
+.brand{display:inline-block;color:var(--gold);font:800 13px Manrope,Arial,sans-serif;letter-spacing:.2em;text-decoration:none;margin-bottom:10px}
 h1{font:800 clamp(38px,5vw,62px)/1.02 Manrope,Arial,sans-serif;letter-spacing:-.045em;margin:0 0 10px}
 .hero p{max-width:670px;color:var(--muted);font-size:17px;line-height:1.55;margin:0}
 .workspace{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(340px,.85fr);gap:22px;align-items:start}
@@ -44,7 +44,6 @@ h2{font:700 24px Manrope,Arial,sans-serif;letter-spacing:-.025em;margin:8px 0 0}
 footer{display:flex;justify-content:space-between;color:#8a918e;font-size:12px;padding:24px 3px 0}
 footer a{color:inherit}
 @media(max-width:900px){
-  .hero{grid-template-columns:1fr;gap:10px}.brand{padding-top:0}
   .workspace{grid-template-columns:1fr}.scorecard{position:static}
 }
 @media(max-width:600px){
