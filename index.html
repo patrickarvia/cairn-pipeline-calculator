@@ -1,1 +1,68 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cairn Deal Calculator</title><link rel="stylesheet" href="style.css"></head><body><main class="shell"><header class="hero"><a class="brand" href="https://cairngtm.com">CAIRN GTM</a><h1>Cairn Deal Calculator</h1><p>Evaluate a single enterprise opportunity using real deal evidence, not just stage or intuition.</p></header><div class="workspace"><section class="card evidence"><div class="head"><div><div class="eyebrow">DEAL EVIDENCE</div><h2>Score what you can actually verify.</h2></div><button id="reset">Reset</button></div><p class="helper">Rate each signal from None to Verified. Your deal-quality assessment updates instantly.</p><div id="groups"></div></section><aside class="card scorecard"><div class="eyebrow gold">DEAL QUALITY</div><div class="score"><b id="score">0</b><span>/ 100</span></div><div id="status" class="status">UNQUALIFIED</div><div class="track"><i id="bar"></i></div><div class="readout"><div class="mini">READOUT</div><p id="diagnosis"></p></div><div class="results"><div><h3>Strongest signals</h3><ul id="strengths"></ul></div><div><h3>Biggest gaps</h3><ul id="gaps"></ul></div></div><div class="focus"><div class="mini">WHAT I'D FOCUS ON NEXT</div><p id="focus"></p></div></aside></div><footer><span>Built by <a href="https://cairngtm.com">Cairn GTM</a></span><span>Directional deal assessment, not a forecast.</span></footer></main><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cairn Deal Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell">
+  <header class="hero">
+    <a class="brand" href="https://cairngtm.com">CAIRN GTM</a>
+    <div>
+      <h1>Cairn Deal Calculator</h1>
+      <p>Evaluate a single enterprise opportunity using real deal evidence, not just stage or intuition.</p>
+    </div>
+  </header>
+
+  <div class="workspace">
+    <section class="card evidence">
+      <div class="head">
+        <div>
+          <div class="eyebrow gold">DEAL EVIDENCE</div>
+          <h2>Score what you can actually verify.</h2>
+        </div>
+        <button id="reset" type="button">Reset</button>
+      </div>
+      <p class="helper">Rate each signal from None to Verified. Your deal-quality assessment updates instantly.</p>
+      <div id="groups"></div>
+    </section>
+
+    <aside class="card scorecard">
+      <div class="eyebrow gold">DEAL QUALITY</div>
+      <div class="score"><b id="score">0</b><span>/ 100</span></div>
+      <div id="status" class="status">UNQUALIFIED</div>
+      <div class="track"><i id="bar"></i></div>
+
+      <div class="readout">
+        <div class="mini">READOUT</div>
+        <p id="diagnosis">There is not enough verified evidence yet to support confidence in this opportunity.</p>
+      </div>
+
+      <div class="results">
+        <div>
+          <h3>Strongest signals</h3>
+          <ul id="strengths"><li>None yet</li></ul>
+        </div>
+        <div>
+          <h3>Biggest gaps</h3>
+          <ul id="gaps"></ul>
+        </div>
+      </div>
+
+      <div class="focus">
+        <div class="mini">WHAT I'D FOCUS ON NEXT</div>
+        <p id="focus"></p>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <span>Built by <a href="https://cairngtm.com">Cairn GTM</a></span>
+    <span>Directional deal assessment, not a forecast.</span>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
