@@ -101,6 +101,8 @@
       quality >= 45 ? "DEVELOPING" :
       quality >= 23 ? "EARLY" : "UNQUALIFIED";
 
+    statusEl.closest(".scorecard").dataset.status = statusEl.textContent;
+
     const strongest = [...signals]
       .sort((a,b) => state[b.id] - state[a.id])
       .filter(s => state[s.id] >= 2)
