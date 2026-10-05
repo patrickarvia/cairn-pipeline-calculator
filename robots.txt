@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://patrickarvia.github.io/cairn-pipeline-calculator/sitemap.xml
