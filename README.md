@@ -1,8 +1,10 @@
 # Cairn Deal Calculator
 
-A lightweight tool for evaluating a single enterprise sales opportunity using deal evidence, not just stage or intuition.
+Cairn Deal Calculator is a lightweight enterprise sales tool for evaluating a single opportunity using actual deal evidence rather than CRM stage or intuition alone.
 
-The calculator scores an opportunity across six common enterprise deal signals:
+[Open the calculator](https://patrickarvia.github.io/cairn-pipeline-calculator/) · [Product overview](https://patrickarvia.com/deal-calculator/) · [Cairn GTM](https://cairngtm.com/) · [Built by Patrick Arvia](https://patrickarvia.com/)
+
+The calculator evaluates an opportunity across six common enterprise deal signals:
 
 - Executive sponsorship
 - Multithreading
@@ -39,6 +41,4 @@ GitHub will provide a public URL after deployment.
 
 ## About
 
-Built by Patrick Arvia / Cairn GTM.
-
-https://cairngtm.com
+Built by [Patrick Arvia](https://patrickarvia.com/) through [Cairn GTM](https://cairngtm.com/).
